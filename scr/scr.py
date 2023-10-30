@@ -6,7 +6,7 @@ import pandas as pd
 
 def check_nan(df):
     
-    """
+    """ Función de Yona
     Recibe un dataframe y enseña el % de nulos y lo grafica
     """
     
@@ -17,22 +17,6 @@ def check_nan(df):
     displayhook(f'N nan cols: {len(nan_cols)}')
     displayhook(nan_cols)
     
-    
-    # grafico de nulos en el dataframe
-    """
-    #inicializa la figura
-    +plt.figure(figsize=(10, 6))  # 100X60  pixeles
-
-
-
-
-    sns.heatmap(df.isna(),       # datos
-                yticklabels=False,  # quita las etiquetas del eje y
-                cmap='viridis',      # mapa de color
-                cbar=False           # sin barra lateral
-               )
-
-    plt.show();"""
 
 
 def column_unification(df):
@@ -68,7 +52,7 @@ def split_string(string, character, wish_len, filler):
     
     return lst 
 
-
+#So proud of this function :D
 def fill_column(row, df_to_compare, column_to_compare, column_to_change):
     
     if row[column_to_compare] in df_to_compare[column_to_compare].values:
@@ -76,5 +60,5 @@ def fill_column(row, df_to_compare, column_to_compare, column_to_change):
         matching_row = df_to_compare[df_to_compare[column_to_compare] == row[column_to_compare]]
         
         row[column_to_change] = matching_row[column_to_change].values[0]
-        
+
     return row
