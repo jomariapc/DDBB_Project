@@ -1,6 +1,10 @@
-SELECT customer_id, customer_first_name, customer_last_name, actor_id, actor_first_name, actor_last_name, favorite_actor_count
+SELECT customer_id as 'CUSTOMER_ID', 
+concat(customer_first_name, ' ', customer_last_name) as CUSTOMER, 
+customer_email as EMAIL,
+actor_id as 'ACTOR_ID', concat(actor_first_name, ' ', actor_last_name) as ACTOR, 
+favorite_actor_count as 'FAVORITE ACTOR COUNT'
 FROM (
-    SELECT c.customer_id, c.first_name AS customer_first_name, c.last_name AS customer_last_name,
+    SELECT c.customer_id, c.first_name AS customer_first_name, c.last_name AS customer_last_name, c.email as customer_email,
            a.actor_id, a.first_name AS actor_first_name, a.last_name AS actor_last_name,
            COUNT(*) AS favorite_actor_count,
            ROW_NUMBER() OVER(PARTITION BY c.customer_id ORDER BY COUNT(*) DESC) AS actor_rank

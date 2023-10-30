@@ -4,17 +4,18 @@
 
 ## I. Data Cleaning
 [Notebook Link: project_db_cleaning.ipynb](src/project_db_cleaning.ipynb)
-Revisión de todas las tablas para encontrar y reemplazar o eliminar valores nulos, duplicados o constantes.
+
+Review of all tables to find and replace or remove null, duplicate or constant values.
 
 1. Import libraries and scr.py file
 2. Import & clean documents
-   2.1. actors.csv
-   2.2. category.csv
-   2.3. film.csv
-   2.4. inventory.csv
-   2.5. language.csv
-   2.6. old_HDD.csv
-   2.7. rental.csv
+   2. 1. actors.csv
+   2. 2. category.csv
+   2. 3. film.csv
+   2. 4. inventory.csv
+   2. 5. language.csv
+   2. 6. old_HDD.csv
+   2. 7. rental.csv
 
 ![Resumen Limpieza](img/resume_cleaning_table.png)
 
@@ -22,7 +23,7 @@ Revisión de todas las tablas para encontrar y reemplazar o eliminar valores nul
 
 ## II. Data exploration
 [Notebook Link: project_data_exploration.ipynb](src/project_data_exploration.ipynb)
-Una vez limpias las tablas, se pueden ver valores repetidos y asociaciones a las que hay que asignarles una tabla específica.
+Once the tables have been cleaned, you can see repeated values and associations to which you need to assign a specific table.
 
 ### 2.1. special_features:
    New table “special_features”
@@ -39,7 +40,7 @@ Una vez limpias las tablas, se pueden ver valores repetidos y asociaciones a las
 ### 2.4. Inventory & rental
    The way both tables are set up, it only allows the rental of one film at a time. So the best idea is to reconvert that table to “rental_detail” which will be the intermediate table of the many-to-many relationship between “rental” and “film” and it will only have two columns: “film_id” and “rental_id”
 
-### 2.4 "language"
+### 2.5 "language"
    As the last step, 'Unknown' is added to the language table and the unknown language id is added to original_language_id in film
 
 ### 3. Export documents

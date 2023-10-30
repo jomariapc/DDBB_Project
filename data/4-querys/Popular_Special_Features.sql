@@ -1,4 +1,4 @@
-SELECT sp.special_feature , COUNT(f.film_id)
+SELECT sp.special_feature as 'SPECIAL FEATURE', COUNT(f.film_id) as FILMS
 FROM film f
 INNER JOIN film_has_special_features fs
 ON fs.film_id = f.film_id
