@@ -58,11 +58,13 @@ I also created a fake table “customers” with 50 more records.
 ## IV. ERD
 ![Diagrama Entidad-Relación](img/ERD.png)
 
+[ERD](data/ERD.sql)
+
 ### 1. New tables
 
 ![New Tables](img/new_tables_ERD.png)
 
-[CREATE AND INSERTS.sql](src/CREATE AND INSERTS.sql)
+[CREATE AND INSERTS.sql](data/CREATE_INSERTS.sql)
 
 ### 2. Querys
 #### Best Seller
