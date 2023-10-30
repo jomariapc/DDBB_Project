@@ -61,3 +61,5 @@ IV. ERD
 ![Diagrama Entidad-Relación](img/ERD.png)
 
 [CREATE AND INSERTS.sql](src/CREATE AND INSERTS.sql)
+
+<h1 align="center"> Blockbuster in 2023 </h1>
