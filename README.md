@@ -1,6 +1,4 @@
-# Readme DDBB Project
-
-![Portada](img/portada.jpg)
+![Portada](img/portada.png)
 
 ## Blockbuster Today
 
@@ -18,7 +16,7 @@ Revisión de todas las tablas para encontrar y reemplazar o eliminar valores nul
    2.6. old_HDD.csv
    2.7. rental.csv
 
-![Resumen Limpieza](img/cleaning_resume.jpg)
+![Resumen Limpieza](img/resume_cleaning_table.png)
 
 3. Export documents
 
@@ -27,13 +25,13 @@ II. Data exploration
 Una vez limpias las tablas, se pueden ver valores repetidos y asociaciones a las que hay que asignarles una tabla específica.
 
 2.1. special_features:
-   Creación de nueva tabla “special_features”
-   Asociación con “films”: many to many
-   Creación de tabla “film_has_special_features”
+   New table “special_features”
+   Asociation with “films”: many to many
+   New table “film_has_special_features”
 
 2.2. category
-   La única tabla que asocia category con film es “old_HDD”, así que cree una nueva columna en “films” llamada “category_id” y la rellené según el “film_id” que contienen ambas tablas. 
-   Las que no tenían datos se rellenaron con el id de una nueva “category”: "Unknown"
+   The only table that associates category with film is "old_HDD", so I created a new column in "films" called "category_id" and filled it according to the "film_id" contained in both tables. 
+   The ones with no data were filled with the id of a new "category": "Unknown".
 
 2.3. films & actor
    “actor” and “film” have a many to many relation. So, the only way to associate those two is to create the "film_has_actor" table with their corresponding id. That is only possible thanks to the charming “old_HDD” table. Ta-da!
@@ -60,6 +58,9 @@ I also created a fake table “customers” with 50 more records.
 IV. ERD
 ![Diagrama Entidad-Relación](img/ERD.png)
 
+1. New tables
+
+![New Tables](img/new_tables_ERD.png)
+
 [CREATE AND INSERTS.sql](src/CREATE AND INSERTS.sql)
 
-<h1 align="center"> Blockbuster in 2023 </h1>
