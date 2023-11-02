@@ -1,3 +1,5 @@
 *.txt
-*.pptx
+DDBB_Project.pptx
 passwords.txt
+src/.ipynb_checkpoints
+src/__pycache__
