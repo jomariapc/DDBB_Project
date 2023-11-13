@@ -3,7 +3,7 @@
 # Blockbuster Today
 
 ## I. Data Cleaning
-[Notebook Link: project_db_cleaning.ipynb](src/project_db_cleaning.ipynb)
+[Notebook Link: project_db_cleaning.ipynb](src/Jupyter Notebooks/I-Data_Cleaning.ipynb)
 
 Review of all tables to find and replace or remove null, duplicate or constant values.
 
